@@ -20,7 +20,7 @@ tools = [weather, exchange_rate]
 
 llm = ChatOpenAI(model="deepseek-chat",api_key=os.getenv("DEEPSEEK_API_KEY"), base_url="https://api.deepseek.com", temperature=0)
 
-agent = create_agent(model=llm, tools=tools,)
+agent = create_agent(model=llm, tools=tools, system_prompt="You are a helpful assistant.when the user asks about currency conversion or exchange rate, use the exchange_rate tool. when the user asks about weather, use the weather tool.")
 
 while True:
     query = input("Enter your query (or 'exit' to quit): ")
