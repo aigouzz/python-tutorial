@@ -25,16 +25,25 @@
 
 
 #方法二
-i=1
-while i<10: #控制行，1到9
-    j=1
-    while j <= i: #控制每行显示的数量，1到9
-        print("%d*%d=%d"%(j,i,i*j),end=' ') #输出
-        j+=1 #每行显示的数量加1
-    print("\n") #每一行结束换行
-    i+=1 #行数加1
+# i=1
+# while i<10: #控制行，1到9
+#     j=1
+#     while j <= i: #控制每行显示的数量，1到9
+#         print("%d*%d=%d"%(j,i,i*j),end=' ') #输出
+#         j+=1 #每行显示的数量加1
+#     print("\n") #每一行结束换行
+#     i+=1 #行数加1
 
-for i in range(1,10):
-    print()
-    for j in range(1,i+1):
-        print('%d*%d=%d' % (j,i,i*j),end=' ')
+# for i in range(1,10):
+#     print()
+#     for j in range(1,i+1):
+#         print('%d*%d=%d' % (j,i,i*j),end=' ')
+
+i = 1
+while i < 10:
+    j = 1
+    while j <= i:
+        print("%d*%d=%d" % (j, i, i*j), end=' ')
+        j += 1
+    print("\n")
+    i+=1
